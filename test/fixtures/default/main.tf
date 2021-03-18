@@ -11,7 +11,7 @@ provider "google" {
 
 
 module "computeenginecreation" {
-  source = "https://github.com/samjithin/cemodulewithkitchen"
+  source = "../../../"
   instance_name = "jiny"
   
 }
