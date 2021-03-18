@@ -16,7 +16,7 @@ platforms:
 suites:
   - name: default
     driver:
-      root_module_directory: test\fixtures\default
+      root_module_directory: test/fixtures/default
     verifier:
       color: true
       systems:
