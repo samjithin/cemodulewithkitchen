@@ -11,7 +11,7 @@ provider "google" {
 
 
 module "computeenginecreation" {
-  source = "D:\\Testkitchen"
+  source = ../../../
   instance_name = "jiny"
   
 }
