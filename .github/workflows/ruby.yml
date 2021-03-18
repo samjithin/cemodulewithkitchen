@@ -46,4 +46,9 @@ jobs:
         ruby-version: 2.6
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: bundle exec kitchen diagnose --all
+      run: bundle exec kitchen verify
+
+
+
+
+
