@@ -11,7 +11,7 @@ provider "google" {
 
 
 module "computeenginecreation" {
-  source = ../../../
+  source = "../../../"
   instance_name = "jiny"
   
 }
