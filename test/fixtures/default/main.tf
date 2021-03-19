@@ -16,10 +16,10 @@ module "computeenginecreation" {
   
 }
 
-#output "instancedata" {
-#   value = module.computeenginecreation.instance_name
+output "instance_name" {
+   value = module.computeenginecreation.instance_name
   
-#}
+}
 
 
 
