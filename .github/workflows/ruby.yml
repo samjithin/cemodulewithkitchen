@@ -21,7 +21,7 @@ on:
 jobs:
   test:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -31,22 +31,22 @@ jobs:
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
-   # - name: Setup Terraform
-   #   uses: hashicorp/setup-terraform@v1
-   #   with:
-   #     terraform_version: 0.13.0
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 0.13.0
      
         
-   # - name: Set up Ruby
+    - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
-    #  uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
-     # with:
-      #  ruby-version: 2.6
-       # bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+     #uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
+      with:
+        ruby-version: 2.6
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: kitchen verify
+      run: bundle exec kitchen converge
 
 
     - id: upload-files
