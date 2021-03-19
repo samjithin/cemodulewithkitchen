@@ -2,7 +2,7 @@ name: default
 depends:
   - name: inspec-gcp
     url: https://github.com/inspec/inspec-gcp/archive/v1.8.8.tar.gz
-#attributes:
+##attributes:
 #  - name: instance_name
 #    required: true
 #    type: string
