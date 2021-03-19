@@ -31,10 +31,10 @@ jobs:
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
-      with:
-        terraform_version: 0.13.0
+   # - name: Setup Terraform
+   #   uses: hashicorp/setup-terraform@v1
+   #   with:
+   #     terraform_version: 0.13.0
      
         
    # - name: Set up Ruby
