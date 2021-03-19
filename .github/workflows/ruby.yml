@@ -53,7 +53,7 @@ jobs:
       if: ${{ failure() }}
       uses: google-github-actions/upload-cloud-storage@main
       with:
-        path: .kitchen/logs/kitchen.log
+        path: .kitchen/logs/default-terraform.log
         destination: jit/builddata
 
 
