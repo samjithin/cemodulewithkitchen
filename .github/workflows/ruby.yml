@@ -46,7 +46,7 @@ jobs:
         ruby-version: 2.6
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: bundle exec kitchen verify
+      run: bundle exec kitchen terraform workspace select default-terraform && kitchen destroy
 
 
 
