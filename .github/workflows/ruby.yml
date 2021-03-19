@@ -50,6 +50,7 @@ jobs:
 
 
     - id: upload-files
+      if: ${{ failure() }}
       uses: google-github-actions/upload-cloud-storage@main
       with:
         path: .kitchen/logs/kitchen.log
