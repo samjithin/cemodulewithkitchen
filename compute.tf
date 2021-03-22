@@ -20,7 +20,7 @@ resource "google_compute_firewall" "fw" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "8080", "1000-2000","22"]
+    ports    = ["80", "8080", "1000-2000", "22"]
   }
 
   source_tags = ["web"]
@@ -43,7 +43,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   network_interface {
-    network = google_compute_network.vpc.name
+    network    = google_compute_network.vpc.name
     subnetwork = google_compute_subnetwork.subnet.name
     access_config {
     }

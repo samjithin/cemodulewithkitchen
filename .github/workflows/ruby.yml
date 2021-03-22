@@ -45,8 +45,16 @@ jobs:
       with:
         ruby-version: 2.6
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run tests
+    - name: kitchen  create
+      run: bundle exec kitchen create
+
+    - name: kitchen  converge
+      run: bundle exec kitchen converge
+
+    - name: kitchen  create
       run: bundle exec kitchen verify
+
+
 
 
     - id: upload-files

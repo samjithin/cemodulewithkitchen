@@ -29,9 +29,9 @@ variable "image_name" {
 }
 
 variable "instance_name" {
-    type        = string
-    description = "Name of the machine"
-    default     = "test"
+  type        = string
+  description = "Name of the machine"
+  default     = "test"
 }
 
 
