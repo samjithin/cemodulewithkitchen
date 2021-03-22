@@ -4,9 +4,9 @@ provider "google" {
   zone    = var.zone_name
 }
 
-#terraform {
-#  backend "gcs" {
-#    bucket = "terrabucket91"
-#    prefix = "terraform/modulestate"
-#  }
-#}
+terraform {
+  backend "gcs" {
+    bucket = "terrabucket91"
+    prefix = "terraform/modulestate"
+  }
+}
