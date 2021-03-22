@@ -51,8 +51,12 @@ jobs:
     - name: kitchen  converge
       run: bundle exec kitchen converge
 
-    - name: kitchen  create
+    - name: kitchen  verify
       run: bundle exec kitchen verify
+      
+    - name: kitchen  diagnose
+      if: ${{ failure() }}
+      run: bundle exec kitchen diagnose --all
 
 
 
