@@ -56,7 +56,7 @@ jobs:
       
     - name: kitchen  diagnose
       if: ${{ failure() }}
-      run: kitchen diagnose --all
+      run: bundle exec kitchen diagnose --all
 
 
 
