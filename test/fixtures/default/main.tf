@@ -13,13 +13,12 @@ provider "google" {
 module "computeenginecreation" {
   source = "../../../"
   #instance_name = "jithin"
-  
 }
 
-output "instance_name" {
-   value = module.computeenginecreation.instance_name
+#output "instance_name" {
+#   value = module.computeenginecreation.instance_name
   
-}
+#}
 
 
 
