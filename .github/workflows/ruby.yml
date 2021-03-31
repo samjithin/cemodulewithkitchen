@@ -41,6 +41,10 @@ jobs:
           kitchen create
           kitchen converge
           kitchen list
-          kitchen verify    
+          kitchen verify 
+
+      - name: kitchen-destroy
+        if: ${{ failure() }}
+        run: |   
           kitchen destroy
 
