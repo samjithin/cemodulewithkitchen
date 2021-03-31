@@ -1,7 +1,7 @@
 
 FROM ruby:2.7.2
 
-# Terraform client CLI version
+# Terraform client CLI version/
 ARG terraform_cli_version=0.14.9 
 
 
